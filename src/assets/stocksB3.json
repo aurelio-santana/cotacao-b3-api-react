@@ -9,6 +9,7 @@
   },
   "results":
   [
+    {"segment":null,"cod":"TESTE","asset":"Dados padrão","type":"Arquivo .json","part":"0.406","partAcum":null,"theoricalQty":"196,144,421"},
     {"segment":null,"cod":"RRRP3","asset":"3R PETROLEUM","type":"ON      NM","part":"0.406","partAcum":null,"theoricalQty":"196,144,421"},
     {"segment":null,"cod":"ALSO3","asset":"ALIANSCSONAE","type":"ON      NM","part":"0.308","partAcum":null,"theoricalQty":"330,109,863"},
     {"segment":null,"cod":"ALPA4","asset":"ALPARGATAS","type":"PN      N1","part":"0.108","partAcum":null,"theoricalQty":"202,765,994"},

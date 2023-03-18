@@ -1,17 +1,25 @@
 import TableClass from 'react-bootstrap/Table';
-import '../styles/Style.css';
+//import '../styles/darkStyle.css';
 import StocksData from '../assets/stocksB3.json';
 import PricesData from '../assets/priceB3.json';
 import { ListItem } from '@mui/material';
-
-
-
-
+import { useEffect, useMemo } from 'react';
 
 var allPrices = [{cod: String , price: Number}];
-var dados;
 
-function Grid(data) {
+
+function Grid(props) {
+
+
+var dataTable;
+console.log("props: ", props.dataTable)
+if (props.dataTable == undefined)
+    dataTable = [];
+else
+    dataTable = props.dataTable;
+
+
+/* 
     console.log("grid1");
 
     if (data.length === undefined)
@@ -22,10 +30,12 @@ function Grid(data) {
     console.log("data2: ", data);
     console.log("dados2: ", dados);
  
+    var dataTeste = [];
 
     getPriceJson();
-
+ */
     /* getData(); */
+    var dataTeste = []
     
 
     return (
@@ -50,7 +60,7 @@ function Grid(data) {
                 </thead>
 
                 <tbody>
-                        {StocksData.results.map((item, i) => (     
+                        {dataTable.map((item, i) => (     
                     <tr key={i}>
                         <td>{item.cod}</td>
                         <td>{item.asset}</td>
@@ -60,7 +70,7 @@ function Grid(data) {
                     </tr>
                      ))}
                 </tbody>
-            </TableClass>
+            </TableClass>     
         </div>
     );
 }
@@ -77,6 +87,8 @@ function getPriceJson(ticker) {
     return result;
     
 }
+
+
 
 /* async function getData() {
     const getData = await (StocksData.results);
